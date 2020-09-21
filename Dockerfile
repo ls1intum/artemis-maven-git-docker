@@ -1,11 +1,11 @@
-FROM maven:3.6.3-jdk-14
+FROM maven:3.6.3-jdk-15
 
 MAINTAINER Stephan Krusche <krusche@in.tum.de>
 
 #install git
 RUN yum install wget make curl-devel expat-devel gettext-devel openssl-devel zlib-devel -y && yum install gcc perl-ExtUtils-MakeMaker -y && yum remove git -y
 
-RUN cd /usr/src && wget https://www.kernel.org/pub/software/scm/git/git-2.27.0.tar.gz && tar xzf git-2.27.0.tar.gz && cd git-2.27.0 && make prefix=/usr/local all && make prefix=/usr/local install && git --version && rm -rf /usr/src/git-2.27.0.tar.gz && rm -rf /usr/src/git-2.27.0
+RUN cd /usr/src && wget https://www.kernel.org/pub/software/scm/git/git-2.29.0.tar.gz && tar xzf git-2.29.0.tar.gz && cd git-2.29.0 && make prefix=/usr/local all && make prefix=/usr/local install && git --version && rm -rf /usr/src/git-2.29.0.tar.gz && rm -rf /usr/src/git-2.29.0
 
 ADD artemis-java-template /opt/artemis-java-template
 
