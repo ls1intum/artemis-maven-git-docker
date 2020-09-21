@@ -1,4 +1,6 @@
-FROM maven:3.6.3-jdk-15
+FROM maven:3.6.3-openjdk-15
+
+
 
 MAINTAINER Stephan Krusche <krusche@in.tum.de>
 
