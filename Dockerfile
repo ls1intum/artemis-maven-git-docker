@@ -11,7 +11,7 @@ RUN cd /usr/src && wget https://www.kernel.org/pub/software/scm/git/git-2.29.0.t
 
 ADD artemis-java-template /opt/artemis-java-template
 
-RUN cd /opt/artemis-java-template && pwd && ls -la && mvn clean install test
+RUN cd /opt/artemis-java-template && pwd && ls -la && mvn clean install test && mvn spotbugs:spotbugs checkstyle:checkstyle pmd:pmd
 
 RUN rm -rf /opt/artemis-java-template
 
