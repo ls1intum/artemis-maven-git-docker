@@ -1,12 +1,6 @@
 # artemis-maven-git-docker
-Docker Container for Docker Hub
 
-	docker build --no-cache -t artemis-maven-git-docker .
 
-	docker run -itd -p 80:80 --name artemis-maven-git-docker artemis-maven-git-docker /bin/bash
-
-	docker exec -it artemis-maven-git-docker /bin/bash
-
-	java -version
-	
-	git -version
+## Deprecated
+This image is deprecated as git was added to https://github.com/ls1intum/artemis-maven-docker.
+Please use https://github.com/ls1intum/artemis-maven-docker instead as this image will not receive any updates.
